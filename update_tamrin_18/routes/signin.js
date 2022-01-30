@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
   if (req.session.user && req.cookies.user_seed) {
     res.redirect("/profile");
   } else {
-    res.render("login");
+    res.render("login" , {msg : null});
   }
 });
 
